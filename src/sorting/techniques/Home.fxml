@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="830.0" prefWidth="1428.0"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="sorting.techniques.SortingTechniques">
+    <children>
+        <Button layoutX="504.0" layoutY="638.0" mnemonicParsing="false" onAction="#generate" prefHeight="58.0" prefWidth="230.0" text="Generate">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+        </Button>
+        <Label fx:id="arrays_data" layoutX="224.0" layoutY="26.0" prefHeight="130.0" prefWidth="1193.0">
+            <font>
+                <Font name="Arial Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="title" layoutX="37.0" layoutY="26.0" prefHeight="130.0" prefWidth="180.0">
+            <font>
+                <Font name="Arial Bold" size="18.0" />
+            </font>
+        </Label>
+        <BarChart fx:id="chart" layoutX="47.0" layoutY="229.0" prefHeight="330.0" prefWidth="435.0" title="Algorithm Runtime">
+            <xAxis>
+                <CategoryAxis label="Type of Array" side="BOTTOM" fx:id="x" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="y" label="Runtime (milliSeconds)" side="LEFT" />
+            </yAxis>
+        </BarChart>
+        <Label fx:id="title1" layoutX="477.0" layoutY="170.0" prefHeight="44.0" prefWidth="168.0" text="Select Algorithm : ">
+            <font>
+                <Font name="Arial Bold" size="18.0" />
+            </font>
+        </Label>
+        <ChoiceBox fx:id="menu" layoutX="671.0" layoutY="174.0" prefHeight="35.0" prefWidth="210.0">
+        </ChoiceBox>
+      <BarChart fx:id="chart1" layoutX="511.0" layoutY="229.0" prefHeight="330.0" prefWidth="435.0" title="Interchanges">
+         <xAxis>
+            <CategoryAxis label="Type of Array" side="BOTTOM" fx:id="x1" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="y1" label="number of interchanges" side="LEFT" />
+         </yAxis>
+      </BarChart>
+      <BarChart fx:id="chart2" layoutX="967.0" layoutY="229.0" prefHeight="330.0" prefWidth="435.0" title="Comparisons">
+         <xAxis>
+            <CategoryAxis label="Type of Array" side="BOTTOM" fx:id="x2" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="y2" label="numbers of comparisons" side="LEFT" />
+         </yAxis>
+      </BarChart>
+      <Button layoutX="776.0" layoutY="638.0" mnemonicParsing="false" onAction="#visualize" prefHeight="58.0" prefWidth="230.0" text="visualize">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Label fx:id="title11" layoutX="504.0" layoutY="573.0" prefHeight="44.0" prefWidth="168.0" text="Size of Array : ">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="sizeArray" accessibleText="phone" layoutX="660.0" layoutY="583.0" />
+      <Button layoutX="645.0" layoutY="734.0" mnemonicParsing="false" onAction="#iterations" prefHeight="58.0" prefWidth="230.0" text="Show iterations">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
